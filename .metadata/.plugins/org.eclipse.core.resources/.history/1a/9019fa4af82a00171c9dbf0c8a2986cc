@@ -1,0 +1,5 @@
+package com.wipf.springdemo;
+
+public class BaseballCoach {
+
+}
