@@ -25,7 +25,7 @@ public class Fish extends Animal {
     }
 
     private void moveBackFin(){
-        
+
     }
 
     private void swim(int speed){
