@@ -14,7 +14,7 @@ public class Toner {
         return level;
     }
 
-    public void fillToner(int tonerFill){
+    public int fillToner(int tonerFill){
         if (tonerFill > 0){
             if ((this.level + tonerFill) > 100){
                 this.level = 100;
@@ -22,6 +22,6 @@ public class Toner {
                 this.level += tonerFill;
             }
         }
-        System.out.println("Printer toner leve is " + this.level);
+        return this.level;
     }
 }
