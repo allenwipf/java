@@ -1,26 +1,13 @@
 package com.allenwipf;
 
-public class Main {
+public class Main extends Object{
 
     public static void main(String[] args) {
-        Vehicle vehicle = new Vehicle("Bus", "Large");
 
-        System.out.println("The name of this vehicle is " + vehicle.getName() +
-                " and the size is " + vehicle.getSize());
-
-        vehicle.changeGears(5);
-        vehicle.moving(67, "left");
-        vehicle.steering("left");
-
-        System.out.println("****************");
-
-        Plane boeing = new Plane("767", "Very Large", 45_000, 50_000);
-
-        boeing.steering("up");
-        boeing.moving(1000, "up");
-        boeing.getFullCap();
-        vehicle.steering("up");
-
+        Outlander outlander = new Outlander(36);
+        outlander.steer(45);
+        outlander.accelator(30);
+        outlander.accelator(20);
+        outlander.accelator(-42);
     }
-
 }

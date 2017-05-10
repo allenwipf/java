@@ -1,21 +1,33 @@
 package com.allenwipf;
 
-import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
-
 /**
- * Created by Wipf on 5/9/17.
+ * Created by dev on 8/3/15.
  */
 public class Vehicle {
     private String name;
     private String size;
 
-    private int currentSpeed;
+    private int currentVelocity;
+    private int currentDirection;
 
     public Vehicle(String name, String size) {
         this.name = name;
         this.size = size;
 
-        this.currentSpeed = 2;
+        this.currentVelocity = 0;
+        this.currentDirection = 0;
+    }
+
+    public void steer(int direction) {
+        this.currentDirection += direction;
+        System.out.println("Vehicle.steer(): Steering at " + currentDirection + " degrees.");
+    }
+
+    public void move(int velocity, int direction) {
+        currentVelocity = velocity;
+        currentDirection = direction;
+        System.out.println("Vehicle.move(): Moving at " + currentVelocity + " in direction " + currentDirection);
+
     }
 
     public String getName() {
@@ -26,21 +38,15 @@ public class Vehicle {
         return size;
     }
 
-    public void steering(String direction){
-
-        if (direction.toLowerCase() == "forward" || direction.toLowerCase() == "backwards") {
-            System.out.println("Vehicle is stearing " + direction + ".");
-        } else {
-            System.out.println("Vehicles can't go " + direction + ".");
-        }
+    public int getCurrentVelocity() {
+        return currentVelocity;
     }
 
-    public void changeGears(int gear){
-        System.out.println("Vehicle is in gear " + gear + ".");
+    public int getCurrentDirection() {
+        return currentDirection;
     }
 
-    public void moving(int speed, String direction){
-        System.out.println("Vehicle is moving " + (this.currentSpeed + speed) + " mph in direction " + direction);
+    public void stop() {
+        this.currentVelocity = 0;
     }
-
 }
