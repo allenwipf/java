@@ -17,6 +17,9 @@ public class Main {
 //        System.out.println("Remaining health is " + player.healthRemaining());
 
         EnhancedPlayer player = new EnhancedPlayer("Allen", 50, "Scar");
+
+
+
         System.out.println("Initial health is " + player.getHealth());
     }
 }
