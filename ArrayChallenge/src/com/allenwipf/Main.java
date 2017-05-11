@@ -10,7 +10,7 @@ public class Main {
     }
 
     public static int[] getIntegers(int numbers){
-        int[] myArray = {4541,3,2,6,0,4};
+        int[] myArray = {6,4,6,2,6,4};
         return myArray;
     }
 
@@ -21,9 +21,13 @@ public class Main {
             int position = 0;
 
             for (int j = 0; j < array.length; j++){
-                if (array[i] > array[j]){
+                if ((array[i] >= array[j]) && (i != j)){
                     position++;
                 }
+            }
+            System.out.println("postion " + position + "goes " + array[i]);
+            while (sortedArray[position] == array[i]){
+                position--;
             }
             sortedArray[position] = array[i];
         }
