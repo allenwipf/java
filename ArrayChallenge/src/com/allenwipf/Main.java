@@ -31,7 +31,6 @@ public class Main {
 
         for (int i = 0; i < array.length; i++){
             int position = 0;
-
             for (int j = 0; j < array.length; j++){
                 if ((array[i] >= array[j]) && (i != j)){
                     position++;
