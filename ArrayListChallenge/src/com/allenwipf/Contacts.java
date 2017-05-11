@@ -37,7 +37,6 @@ public class Contacts {
         if (findIndex(number) >= 0){
             return true;
         }
-        System.out.println("Number doesn't exist.");
         return false;
     }
 

@@ -48,7 +48,12 @@ public class Main {
 
     public static void addNumber(){
         System.out.println("Please enter a number to add\n");
-        myContacts.storeNumber(scanner.nextLine());
+        String newContact = scanner.nextLine();
+        if (!myContacts.checkifExists(newContact)){
+            myContacts.storeNumber(scanner.nextLine());
+        } else {
+            System.out.println("Contact already exists.");
+        }
     }
 
     public static void deleteNumber(){
@@ -63,6 +68,8 @@ public class Main {
             System.out.println("Enter the new number");
             String newNumber = scanner.nextLine();
             myContacts.modifyNumber(oldNumber, newNumber);
+        } else {
+            System.out.println("Contact doesn't exist");
         }
     }
 }
